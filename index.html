@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Make Your Own Project</title>
+
+        <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    </head>
+    <body>
+        <a-scene vr-mode-ui="enabled: false;" embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
+            <!--Assets-->
+            <a-assets>
+                <img id="card1" src="PatternMarker/Alaska/pattern-alaskaCard.png"/>
+                <img id="card2" src="PatternMarker/Dubai/pattern-dubaiCard.png"/>
+                <img id="card3" src="PatternMarker/Hawaii/pattern-hawaiiCard.png"/>
+                <img id="card4" src="PatternMarker/Yellowstone/pattern-yellowstoneCard.png"/>
+            </a-assets>
+
+            <!--Alaska-->
+            <a-marker type="pattern" url="PatternMarker/Alaska/pattern-alaskaCard.patt">
+                <!--Plane-->
+                <a-plane src="#card1"></a-plane>
+            </a-marker>
+
+            <!--Dubai-->
+            <a-marker type="pattern" url="PatternMarker/Dubai/pattern-dubaiCard.patt">
+                <!--Plane-->
+                <a-plane src="#card2"></a-plane>
+            </a-marker>
+
+            <!--Hawaii-->
+            <a-marker type="pattern" url="PatternMarker/Hawaii/pattern-hawaiiCard.patt">
+                <!--Plane-->
+                <a-plane src="#card3"></a-plane>
+            </a-marker>
+
+            <!--Yellowstone-->
+            <a-marker type="pattern" url="PatternMarker/Yellowstone/pattern-yellowstoneCard.patt">
+                <!--Plane-->
+                <a-plane src="#card4"></a-plane>
+            </a-marker>
+        </a-scene>
+    </body>
+</html>
